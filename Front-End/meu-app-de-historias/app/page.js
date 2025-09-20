@@ -2,9 +2,8 @@
 
 import { useState } from 'react';
 
-// Componente de Ícone (SVG embutido para não precisar de bibliotecas externas)
 const BookOpenIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
     <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
   </svg>
@@ -43,7 +42,7 @@ export default function StoryGeneratorPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ prompt: `Crie uma história seguindo essas ideias, por favor, faça uma história lúdica e divertida, com personagens cativantes e um enredo envolvente sobre: ${prompt}. Use uma linguagem simples e acessível para crianças, incorporando elementos de fantasia e aventura. Certifique-se de que a história tenha um começo, meio e fim claros, com uma mensagem positiva ou lição no final. Evite temas complexos ou assustadores, mantendo o tom leve e alegre. A história deve ter no máximo 100 tokens.` }),
+        body: JSON.stringify({ prompt: `Crie uma história seguindo essas ideias, por favor, faça uma história lúdica e divertida, com personagens cativantes e um enredo envolvente sobre: ${prompt}. Use uma linguagem simples e acessível para crianças, incorporando elementos de fantasia e aventura. Certifique-se de que a história tenha um começo, meio e fim claros, com uma mensagem positiva ou lição no final. Evite temas complexos ou assustadores, mantendo o tom leve e alegre. A historia deve ter 100 tokens` }),
       });
 
       if (!response.ok) {
