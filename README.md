@@ -82,7 +82,7 @@ uvicorn main:app --reload
 
 ```bash
 # Navegue para a pasta do frontend
-cd frontend/
+cd Front-End\meu-app-de-historias
 
 # Instale as dependências
 npm install
